@@ -73,9 +73,8 @@ public class SkillsMod : Mod
 
         listing.CheckboxLabeled("VSE.EnableAlert".Translate(), ref Settings.EnableAlert);
         listing.CheckboxLabeled("VSE.AllowMultiCritical".Translate(), ref Settings.AllowMultipleCritical, "VSE.AllowMultiCritical.Desc".Translate());
-        listing.CheckboxLabeled("VSE.CriticalEffectPassions".Translate(), ref Settings.CriticalEffectPassions, "VSE.CriticalEffectPassions.Desc".Translate());
-        listing.CheckboxLabeled("VSE.AlternateCriticalEffects".Translate(), ref Settings.AlternateCriticalEffects, "VSE.AlternateCriticalEffects.Desc".Translate());
         listing.CheckboxLabeled("VSE.AllowExpertiseOverlap".Translate(), ref Settings.AllowExpertiseOverlap, "VSE.AllowExpertiseOverlap.Desc".Translate());
+
         if (ModCompat.InsaneSkills)
             listing.CheckboxLabeled("VSE.EnableSkillLoss".Translate(), ref Settings.EnableSkillLoss, "VSE.EnableSkillsLoss.Desc".Translate());
 
@@ -107,6 +106,9 @@ public class SkillsMod : Mod
         foreach (var def in DefDatabase<PassionDef>.AllDefs.Where(def => def.isBad && !def.isTriggered)) DoEdit(def);
 
         listing.EndSection(inner);
+
+        listing.CheckboxLabeled("VSE.CriticalEffectPassions".Translate(), ref Settings.CriticalEffectPassions, "VSE.CriticalEffectPassions.Desc".Translate());
+        listing.CheckboxLabeled("VSE.AlternateCriticalEffects".Translate(), ref Settings.AlternateCriticalEffects, "VSE.AlternateCriticalEffects.Desc".Translate());
 
         listing.End();
         Widgets.EndScrollView();

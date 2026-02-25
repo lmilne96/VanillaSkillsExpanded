@@ -18,7 +18,6 @@ public class PassionDef : Def
 
     public float inspirationCommonality;
     public bool isBad = false;
-    public string defName;
     public float learnRateFactor = 1f;
     public float learnRateFactorOther = 1f;
     public float learnRateFactorOtherAltMinor = 1f;
