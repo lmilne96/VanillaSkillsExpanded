@@ -322,9 +322,16 @@ public static class PassionPatches
                                               let passion = PassionManager.PassionToDef(record.passion)
                                               where !Mathf.Approximately(passion.learnRateFactorOther, 1f)
                                               select (record, passion))
-                builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": Something like x" + passion.learnRateFactorOther.ToStringPercent("F0"));
-
-
+            {
+                if (passion.defName == "Minor")
+                    builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": x" + passion.learnRateFactorOtherAltMinor.ToStringPercent("F0"));
+                else if (passion.defName == "Major")
+                    builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": x" + passion.learnRateFactorOtherAltMajor.ToStringPercent("F0"));
+                else if (passion.defName == "VSE_Natural")
+                    builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": x" + passion.learnRateFactorOtherAltNatural.ToStringPercent("F0"));
+                else if (passion.defName == "VSE_Critical")
+                    builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": x" + passion.learnRateFactorOtherAltCritical.ToStringPercent("F0"));
+            }
     }
 
     public static void AddForgetRateInfo(SkillRecord sk, StringBuilder builder)
