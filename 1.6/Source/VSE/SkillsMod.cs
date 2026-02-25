@@ -139,7 +139,7 @@ public class SkillsModSettings : ModSettings
     public bool AllowExpertiseOverlap = true;
     public bool AllowMultipleCritical = true;
     public bool CriticalEffectPassions = true;
-    public bool AlternateCriticalEffects = true;
+    public bool AlternateCriticalEffects = false;
     public bool EnableAlert = true;
     public bool EnableSkillLoss;
     public int MaxExpertise = 1;
