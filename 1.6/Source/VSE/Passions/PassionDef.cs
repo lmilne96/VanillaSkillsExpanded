@@ -18,8 +18,13 @@ public class PassionDef : Def
 
     public float inspirationCommonality;
     public bool isBad = false;
+    public string defName;
     public float learnRateFactor = 1f;
     public float learnRateFactorOther = 1f;
+    public float learnRateFactorOtherAltMinor = 1f;
+    public float learnRateFactorOtherAltMajor = 1f;
+    public float learnRateFactorOtherAltCritical = 1f;
+    public float learnRateFactorOtherAltNatural = 1f;
     public string workBoxIconPath;
     private Texture2D icon;
     private Texture2D workBoxIcon;

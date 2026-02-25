@@ -317,6 +317,12 @@ public static class PassionPatches
                                               where !Mathf.Approximately(passion.learnRateFactorOther, 1f)
                                               select (record, passion))
                 builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": x" + passion.learnRateFactorOther.ToStringPercent("F0"));
+        else if (SkillsMod.Settings.AlternateCriticalEffects)
+            foreach (var (record, passion) in from record in sk.pawn.skills.skills.Except(sk)
+                                              let passion = PassionManager.PassionToDef(record.passion)
+                                              where !Mathf.Approximately(passion.learnRateFactorOther, 1f)
+                                              select (record, passion))
+                builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": Something like x" + passion.learnRateFactorOther.ToStringPercent("F0"));
 
 
     }

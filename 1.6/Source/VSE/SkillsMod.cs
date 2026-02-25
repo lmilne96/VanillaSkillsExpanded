@@ -74,6 +74,7 @@ public class SkillsMod : Mod
         listing.CheckboxLabeled("VSE.EnableAlert".Translate(), ref Settings.EnableAlert);
         listing.CheckboxLabeled("VSE.AllowMultiCritical".Translate(), ref Settings.AllowMultipleCritical, "VSE.AllowMultiCritical.Desc".Translate());
         listing.CheckboxLabeled("VSE.CriticalEffectPassions".Translate(), ref Settings.CriticalEffectPassions, "VSE.CriticalEffectPassions.Desc".Translate());
+        listing.CheckboxLabeled("VSE.AlternateCriticalEffects".Translate(), ref Settings.AlternateCriticalEffects, "VSE.AlternateCriticalEffects.Desc".Translate());
         listing.CheckboxLabeled("VSE.AllowExpertiseOverlap".Translate(), ref Settings.AllowExpertiseOverlap, "VSE.AllowExpertiseOverlap.Desc".Translate());
         if (ModCompat.InsaneSkills)
             listing.CheckboxLabeled("VSE.EnableSkillLoss".Translate(), ref Settings.EnableSkillLoss, "VSE.EnableSkillsLoss.Desc".Translate());
@@ -138,6 +139,7 @@ public class SkillsModSettings : ModSettings
     public bool AllowExpertiseOverlap = true;
     public bool AllowMultipleCritical = true;
     public bool CriticalEffectPassions = true;
+    public bool AlternateCriticalEffects = true;
     public bool EnableAlert = true;
     public bool EnableSkillLoss;
     public int MaxExpertise = 1;
@@ -154,6 +156,7 @@ public class SkillsModSettings : ModSettings
         Scribe_Values.Look(ref MaxExpertise, "maxExpertise", 1);
         Scribe_Values.Look(ref AllowMultipleCritical, "allowMultipleCritical", true);
         Scribe_Values.Look(ref CriticalEffectPassions, "criticalEffectPassions", true);
+        Scribe_Values.Look(ref AlternateCriticalEffects, "alternateCriticalEffects", false);
         Scribe_Values.Look(ref EnableAlert, "enableAlert", true);
         Scribe_Values.Look(ref AllowExpertiseOverlap, "allowExpertiseOverlap", true);
         Scribe_Values.Look(ref LevelToGetExpertise, "LevelToGetExpertise", 15);

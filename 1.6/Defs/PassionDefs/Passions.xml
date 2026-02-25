@@ -72,6 +72,10 @@
         <description>This skill is extremely important in some way, most likely due to events in their past.</description>
         <learnRateFactor>3</learnRateFactor>
         <learnRateFactorOther>0.25</learnRateFactorOther>
+        <learnRateFactorOtherAltMinor>0.5</learnRateFactorOtherAltMinor>
+        <learnRateFactorOtherAltMajor>0.75</learnRateFactorOtherAltMajor>
+        <learnRateFactorOtherAltCritical>0.95</learnRateFactorOtherAltCritical>
+        <learnRateFactorOtherAltNatural>0.9</learnRateFactorOtherAltNatural>
         <forgetRateFactor>0</forgetRateFactor>
         <commonality>0.25</commonality>
         <inspirationCommonality>10</inspirationCommonality>

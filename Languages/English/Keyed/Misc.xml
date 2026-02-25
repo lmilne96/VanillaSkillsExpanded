@@ -57,4 +57,6 @@
 	<VSE.GrowthMomentRandomPassions>Random passion chance in growth moments</VSE.GrowthMomentRandomPassions>
 	<VSE.GrowthMomentRandomPassionsDesc>By default, 5% of the time a growth moment will select one of the skills that have no passions and assign either a Natural or an Apathy passion.</VSE.GrowthMomentRandomPassionsDesc>
 	<VSE_Passion>Passion: {0}</VSE_Passion>
+    <VSE.AlternateCriticalEffects>Modify the effects of critical passions</VSE.AlternateCriticalEffects>
+    <VSE.AlternateCriticalEffectsDesc>If true, the learn rate factor debuff on other skills from Critical will have a lesser effect on skills the pawn is passionate about.</VSE.AlternateCriticalEffectsDesc>
 </LanguageData>
