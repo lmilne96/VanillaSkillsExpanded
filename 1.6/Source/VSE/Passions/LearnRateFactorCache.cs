@@ -30,22 +30,22 @@ public static class LearnRateFactorCache
                .Aggregate(passionDef.learnRateFactor,
                     (current, skillRecord) => current * PassionManager.PassionToDef(skillRecord.passion).learnRateFactorOther);
         else if (SkillsMod.Settings.AlternateCriticalEffects)
-            if (passionDef.defName === "Minor")
+            if (passionDef.defName == "Minor")
                 return sr.pawn.skills.skills
                     .Except(sr)
                     .Aggregate(passionDef.learnRateFactor,//current = learnRateFactor of this skill
                         (current, skillRecord) => current * PassionManager.PassionToDef(skillRecord.passion).learnRateFactorOtherAltMinor);
-            else if (passionDef.defName === "Major")
+            else if (passionDef.defName == "Major")
                 return sr.pawn.skills.skills
                     .Except(sr)
                     .Aggregate(passionDef.learnRateFactor,
                         (current, skillRecord) => current * PassionManager.PassionToDef(skillRecord.passion).learnRateFactorOtherAltMajor);
-            else if (passionDef.defName === "VSE_Natural")
+            else if (passionDef.defName == "VSE_Natural")
                 return sr.pawn.skills.skills
                     .Except(sr)
                     .Aggregate(passionDef.learnRateFactor,
                         (current, skillRecord) => current * PassionManager.PassionToDef(skillRecord.passion).learnRateFactorOtherAltNatural);
-            else if (passionDef.defName === "VSE_Critical")
+            else if (passionDef.defName == "VSE_Critical")
                 return sr.pawn.skills.skills
                     .Except(sr)
                     .Aggregate(passionDef.learnRateFactor,
