@@ -323,13 +323,14 @@ public static class PassionPatches
                                               where !Mathf.Approximately(passion.learnRateFactorOther, 1f)
                                               select (record, passion))
             {
-                if (record.def.defName == "Minor")
+                var passionDef = PassionManager.PassionToDef(sk.passion);
+                if (passionDef.defName == "Minor")
                     builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": x" + passion.learnRateFactorOtherAltMinor.ToStringPercent("F0"));
-                else if (record.def.defName == "Major")
+                else if (passionDef.defName == "Major")
                     builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": x" + passion.learnRateFactorOtherAltMajor.ToStringPercent("F0"));
-                else if (record.def.defName == "VSE_Natural")
+                else if (passionDef.defName == "VSE_Natural")
                     builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": x" + passion.learnRateFactorOtherAltNatural.ToStringPercent("F0"));
-                else if (record.def.defName == "VSE_Critical")
+                else if (passionDef.defName == "VSE_Critical")
                     builder.AppendLine("  - " + record.def.LabelCap + ": " + passion.LabelCap + ": x" + passion.learnRateFactorOtherAltCritical.ToStringPercent("F0"));
             }
     }
